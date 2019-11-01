@@ -32,7 +32,7 @@ axios
       let newArticle = ArticleCard(i.authorName, i.authorPhoto, i.headline);
       cardContainer.appendChild(newArticle);
     });
-    response.data.articles.tecnhology.forEach(i => {
+    response.data.articles.technology.forEach(i => {
       let newArticle = ArticleCard(i.authorName, i.authorPhoto, i.headline);
       cardContainer.appendChild(newArticle);
     });
@@ -76,4 +76,6 @@ function ArticleCard(authorName, authorPhoto, headline) {
   author.textContent = authorName;
   imgSrc.src = authorPhoto;
   byAuthor.textContent = `By: ${authorName}`;
+
+  return card;
 }
