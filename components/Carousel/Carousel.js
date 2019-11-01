@@ -17,3 +17,42 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+const carouselContainer = document.querySelector(".carousel-container");
+
+function imageCarousel() {
+  const carouselMain = document.createElement("div");
+  const leftButton = document.createElement("div");
+  const rightButton = document.createElement("div");
+  const imageOne = document.createElement("img");
+  const imageTwo = document.createElement("img");
+  const imageThree = document.createElement("img");
+  const imageFour = document.createElement("img");
+
+  carouselMain.classList.add("carousel");
+  leftButton.classList.add("left-button");
+  rightButton.classList.add("right-button");
+  imageOne.classList.add("carousel-img");
+  imageTwo.classList.add("carousel-img");
+  imageThree.classList.add("carousel-img");
+  imageFour.classList.add("carousel-img");
+
+  carouselMain.appendChild(leftButton);
+  carouselMain.appendChild(imageOne);
+  carouselMain.appendChild(imageTwo);
+  carouselMain.appendChild(imageThree);
+  carouselMain.appendChild(imageFour);
+  carouselMain.appendChild(rightButton);
+
+  imageOne.setAttribute("src", "assets/computer.jpeg");
+  imageTwo.setAttribute("src", "assets/mountains.jpeg");
+  imageThree.setAttribute("src", "assets/trees.jpeg");
+  imageFour.setAttribute("src", "assets/turntable.jpeg");
+
+  return carouselMain;
+}
+
+carouselContainer.prepend(imageCarousel());
+
+const slides = Array.from(imageCarousel());
+console.log(slides);
